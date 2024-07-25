@@ -74,7 +74,7 @@ function Book(event){
     p.innerText = "Thanks for shopping,Your order is booked Now!!!";
     p.style.color ='green';
     bottom.appendChild(p); 
-    alert(temp);
+
     var params ={
         order_value:temp,
         from_name:document.getElementById('name').value,
@@ -83,7 +83,7 @@ function Book(event){
     try {
         emailjs.send('default_service', 'template_v6jjeel', params)
     .then((res) => {
-      alert(`Completed!!!:${res.status}`)
+      console.log(`Completed!!!:${res.status}`)
     })
         
     } catch (error) {
